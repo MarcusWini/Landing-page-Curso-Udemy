@@ -1,0 +1,9 @@
+:root{
+    /*Criando variaveis no CSS*/
+ --primary-color: #0A1128;
+ --white-color: #ffffff;
+ --light-gray-color: #EEEEEE;
+ --secondary-color: crimson;
+ --gap: 3rem;
+}
+

@@ -1,0 +1,63 @@
+
+/*---------------------------Navegacao----------------------------*/
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1; /*Para o menu ficar sempre por cima das imagens*/
+    border-bottom: 0.1rem solid var(--light-gray-color);
+
+}
+.menu-content{
+    display: flex;
+    justify-content: space-between; /* separou a logo da ul*/
+    align-items: center; /*Alinha os itens no eixo vertical*/
+    padding-top: 0;/*Retirando os padding globais top e bottom
+    e deixando os laterais*/
+    padding-bottom: 0;
+}
+
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+
+}
+.menu h1 a{
+    color: inherit; /*Nao pega cor, se nao fizer isso para herdar
+    a cor do PAI*/
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+
+}
+
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative; /*Corrige a posicao do pseudo elemento,
+    senao ele ficaria como absolute e ficaria no topo*/
+}
+
+/*---------------------Efeito do Menu----------------------------*/
+.menu ul li a::after{ /*after é um pseudo elemento*/
+    content:' ';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--secondary-color);
+    transition: all 300ms ease-in-out;
+}
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+}
+
+/*---------------------------------------------------------------*/
